@@ -3,12 +3,4 @@
   <p>We hope you find exactly what you're looking for in a place to stay.</p>
   <LinkTo @route='about' class='button'>About Us</LinkTo>
 </Jumbo>
-<div class="rentals">
-  <ul class="results">
-  {{#each @model as |property| }}
-  <li><Rental @rental={{property}}/></li>
-{{!-- {{log "property" property }} --}}
-  {{/each}}
-  </ul>
-</div>
-{{!-- {{log "model" @model }} --}}
+<Rentals @rentals={{@model}} />
